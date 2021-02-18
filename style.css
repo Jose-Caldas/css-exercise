@@ -1,0 +1,124 @@
+:root {
+  --color-background: #f2f2f2;
+  --color-dark-blue: #0f0f1b;
+  --color-card: #171727;
+  --color-green: #a0e0b2;
+  --color-fonts: #ffffff;
+  --color-light-blue: #242486;
+  --color-button: #8080b9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+body {
+  background: var(--color-dark-blue);
+}
+
+.container {
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-fonts);
+  justify-content: space-around;
+
+  background-color: var(--color-dark-blue);
+}
+.content {
+  max-width: 835px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.header p {
+  font-size: 18;
+  width: 467px;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 265px;
+  height: 267px;
+  margin: 20px;
+  padding: 20px 40px 20px 20px;
+  border-radius: 20px;
+
+  background-color: var(--color-card);
+}
+.card:first-child {
+  background-color: var(--color-light-blue);
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  background-color: var(--color-card);
+  border: 1px solid #1f1f35;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color-button);
+  width: 168px;
+}
+
+.card.m-card {
+  position: relative;
+}
+
+.offer {
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--color-green);
+  border-radius: 15px;
+  padding: 8px;
+  color: var(--color-card);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+}
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .card:nth-child(2) {
+    order: 1;
+  }
+  .card:nth-child(3) {
+    order: 2;
+  }
+  .card:nth-child(1) {
+    order: 3;
+  }
+}
